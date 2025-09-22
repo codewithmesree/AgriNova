@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sample_flutter_project/market_insights_screen.dart';
+import 'package:sample_flutter_project/weather_insights_screen.dart';
+import 'package:sample_flutter_project/crop_recommendation_screen.dart';
+import 'package:sample_flutter_project/chatbot_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -59,6 +62,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               title: const Text('Chatbot'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatbotScreen()));
               },
             ),
             ListTile(
@@ -66,6 +70,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               title: const Text('Weather Insights'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const WeatherInsightsScreen()));
               },
             ),
             ListTile(
