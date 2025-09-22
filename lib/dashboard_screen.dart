@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_flutter_project/market_insights_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -72,6 +73,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               title: const Text('Market Insights'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const MarketInsightsScreen()));
               },
             ),
             const Divider(),
